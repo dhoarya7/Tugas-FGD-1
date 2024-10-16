@@ -1,0 +1,227 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    padding-top: 56px; /* Untuk navbar fixed-top */
+  }
+  
+  section {
+    padding: 100px 0;
+  }
+  
+  .container h1 {
+    color: #000b76;
+    /* border-right: 8px solid #ffffff; */
+    /* overflow: hidden; */
+    font-family: monospace;
+    animation: berjalan 3s steps(12, end), berkedip 0.5s ease infinite;
+  }
+  @keyframes berjalan {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  @keyframes berkedip {
+    from {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #f8b328;
+    }
+    to {
+      border-bottom: transparent;
+    }
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 3rem;
+    color: #7986c6;
+    font-weight: bold;
+  }
+  
+  /* Navigation */
+  .navbar {
+    background-color: #000b76;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar-dark .navbar-nav .nav-link:hover {
+    color: #ffffff;
+  }
+  
+  .navbar-dark .navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    transition: width 0.3s ease;
+  }
+  
+  .navbar-dark .navbar-nav .nav-link:hover::after {
+    width: 100%;
+  }
+  
+  /* Home Section */
+  .jumbotron {
+    background-color: #ffffff;
+    padding-top: 2rem;
+    height: 350px;
+  }
+  
+  .home-text {
+    color: white;
+  }
+  
+  /* About Section */
+  #about {
+    background-color: #ffffff;
+  }
+  /* Custom background for paragraphs in about section */
+  .orange-background {
+    background-color: orange; /* Warna background oranye */
+    padding: 25px; /* Tambahan padding agar teks tidak terlalu dekat dengan tepi */
+    border-radius: 30px; /* Opsional: untuk membuat sudut-sudutnya melengkung */
+  }
+  
+  .about-image,
+  #about img {
+    max-width: 250px;
+    margin: 0 auto;
+    display: block;
+    border: 5px solid #000b76;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-text p {
+    margin-bottom: 1rem;
+  }
+  
+  /* Projects Section */
+  
+  #projects h2 {
+    color: #bbbed2;
+  }
+  #projects .card {
+    transition: all 0.3s ease;
+    border: 4px solid transparent;
+  }
+  
+  #projects .card:hover {
+    transform: translateY(-5px);
+    border-color: #f8b328;
+  }
+  
+  #projects .card img {
+    transition: all 0.3s ease;
+  }
+  
+  #projects .card:hover img {
+    opacity: 0.8;
+  }
+  .projects-oval-container {
+    background-color: #000b76;
+    border-radius: 50% / 20%;
+    padding: 80px 80px;
+    margin: 0 auto;
+    max-width: 95%;
+    position: relative;
+    overflow: hidden;
+  }
+  /* Contact Section */
+  #contact {
+    background-color: #f8f9fa;
+  }
+  
+  #contact h2 {
+    color: #000b76;
+  }
+  
+  #contact .card {
+    height: 100%;
+  }
+  
+  #contact .ratio {
+    border-radius: 0.25rem;
+    overflow: hidden;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  }
+  
+  
+  
+  /* Footer */
+  footer {
+    background-color: #000b76;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 991px) {
+    #contact .ratio {
+      height: 300px;
+      margin-bottom: 1rem;
+    }
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 767px) {
+    .jumbotron {
+      padding: 60px 0;
+    }
+  
+    #about {
+      text-align: center;
+    }
+  
+    .about-image,
+    #about img {
+      max-width: 200px;
+      margin-bottom: 2rem;
+    }
+  
+    .about-text {
+      font-size: 1rem;
+      line-height: 1.6;
+      text-align: left;
+    }
+  }
+  
+  @media (max-width: 575px) {
+    h1 {
+      font-size: 2.2rem;
+    }
+  
+    h2 {
+      font-size: 1.8rem;
+    }
+  
+    .about-image,
+    #about img {
+      max-width: 180px;
+    }
+  
+    .about-text {
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+  }
